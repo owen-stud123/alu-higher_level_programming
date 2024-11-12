@@ -1,4 +1,4 @@
-iii#!/usr/bin/python3
+#!/usr/bin/python3
 '''A function that reads a json file'''
 
 
