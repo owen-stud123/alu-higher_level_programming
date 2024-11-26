@@ -1,39 +1,23 @@
-Import `add_integer`
+#!/usr/bin/python3
+'''a function that adds 2 integers.'''
 
->>> add_integer = __import__('0-add_integer').add_integer
 
->>> add_integer(4, 5)
-9
+def add_integer(a, b=98):
+    ''' Function that adds two integers
+    Args:
+        a : this must be either an integer or float
+        b : Must be either an integer or float, and if not provided
+            it takes the defualt value of 98
+    Returns:
+        an integer: the addition of a and b
+    '''
+    if type(a) == float or type(b) == float:
+        a = int(a)
+        b = int(b)
 
->>> add_integer(4, -5)
--1
+    if type(a) != int:
+        raise TypeError("a must be an integer")
+    if type(b) != int:
+        raise TypeError("b must be an integer")
 
->>> add_integer(4)
-102
-
->>> add_integer('a')
-Traceback (most recent call last):
-TypeError: a must be an integer
-
->>> add_integer(2, 'b')
-Traceback (most recent call last):
-TypeError: b must be an integer
-
->>> add_integer(1, '2')
-Traceback (most recent call last):
-TypeError: b must be an integer
-
->>> add_integer(float('nan'))
-Traceback (most recent call last):
-ValueError: cannot convert float NaN to integer
-
->>> add_integer(1.55)
-99
-
->>> add_integer(2 ** 10000* .1)
-Traceback (most recent call last):
-OverflowError: int too large to convert to float
-
->>> add_integer(float('inf'))
-Traceback (most recent call last):
-OverflowError: cannot convert float infinity to integer
+    return a + b
