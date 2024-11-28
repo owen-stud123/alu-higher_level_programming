@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """Class Square that inherit from Rectangle"""
 
 from models.rectangle import Rectangle
